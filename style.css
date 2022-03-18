@@ -1,7 +1,7 @@
 body {
     font-family: "Roboto", sans-serif;
     min-height: 100%;
-    background-color: #eef1f6;
+    background-color: #f7afd4;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -9,10 +9,10 @@ body {
   }
   
   .continer {
-    background-color: #0a6cf1;
+    background-color: #bea2e5;
     padding: 30px 20px 10px 20px;
     border-radius: 8px;
-    color: #fff;
+    color: #bda1e4;
     width: 450px;
     margin: auto;
     box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);
@@ -21,17 +21,19 @@ body {
     display: block;
   }
   .continer .project-title {
-    font-size: 9pt;
+    font-size: 14pt;
     opacity: 0.5;
+    color: #f1f7f3;
   }
   .continer .project-name {
     font-size: 16pt;
     margin: 5px 0;
+    color: #f1f7f3;
   }
   .continer .counter {
     padding: 25px;
     margin: 25px 0 15px 0;
-    background-color: #000;
+    background-color: #f1f7f3;
     font-weight: 700;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
