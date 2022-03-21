@@ -7,7 +7,7 @@ body {
         -ms-user-select: none;
             user-select: none;
   }
-  
+
   .continer {
     background-color: #bea2e5;
     padding: 30px 20px 10px 20px;
@@ -17,6 +17,7 @@ body {
     margin: auto;
     box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);
   }
+
   .continer label {
     display: block;
   }
@@ -38,7 +39,14 @@ body {
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     min-height: 80px;
+    transition-duration: 0.4s;
   }
+
+  .continer .counter:hover {
+    background-color: #f7afd4;
+    color: white;
+  }
+  
   .continer .counter div {
     display: inline-block;
   }
@@ -87,6 +95,32 @@ body {
     opacity: 0.7;
     -webkit-animation: pink 1s ease-in-out infinite;
             animation: pink 1s ease-in-out infinite;
+  }
+
+  .continer .buttons {
+    margin: 25px 0 15px 0;
+    background-color: #f1f7f3;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    min-height: 45px;
+  }
+
+  .continer .buttons .btn {
+    background-color: #f1f7f3;
+    border-radius: 8px;
+    border: 0;
+    transition-duration: 0.4s;
+    height: 45px;
+    width: 100%;
+    font-size: 16pt;
+    font-weight: 700;
+    color: #bea2e5;
+  }
+
+  .continer .buttons .btn:hover {
+    background-color: #f7afd4;
+    color: white;
   }
   
   .centerIt {

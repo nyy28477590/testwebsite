@@ -40,7 +40,8 @@ function getVoteCount(){
             var res = JSON.parse(xhr.responseText)
             var countNum = (res.competitorStatus[0].TOTALSCORE);
             console.log(countNum)
-            document.querySelector(".voteCount > .value").innerHTML=countNum+" votes"
+            document.querySelector(".voteCount > .value").innerHTML=countNum+" votes";
+
         }};
     },10000);
 };
