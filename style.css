@@ -61,17 +61,17 @@ body {
 
   .continer .counter .voteCount,
   .continer .counter .ranking {
-    display: flex;
+    display: block;
   }
 
   .continer .counter .voteCount .value,
   .continer .counter .ranking .value
   {
-    display: flex;
+    display: block;
     font-size: 50pt;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .continer .counter .days .value,
@@ -81,8 +81,9 @@ body {
     display: block;
     font-size: 36pt;
     width: 100%;
-    display: block;
+    min-height: 80px;
   }
+
   .continer .counter .days span,
   .continer .counter .hours span,
   .continer .counter .minutes span,
