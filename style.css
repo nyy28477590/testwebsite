@@ -58,14 +58,22 @@ body {
     float: left;
     text-align: center;
   }
-  
-  .continer .counter .voteCount .value
+
+  .continer .counter .voteCount,
+  .continer .counter .ranking {
+    display: flex;
+  }
+
+  .continer .counter .voteCount .value,
+  .continer .counter .ranking .value
   {
-    display: block;
+    display: flex;
     font-size: 50pt;
     width: 100%;
-    display: block;
+    justify-content: center;
+    align-items: center;
   }
+
   .continer .counter .days .value,
   .continer .counter .hours .value,
   .continer .counter .minutes .value,
