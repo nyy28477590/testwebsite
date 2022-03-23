@@ -5,13 +5,15 @@
 
 <script>
   window.onload = function() {
+    var ctx = document.getElementById("canvas").getContext("2d");
+    drawLineChart(ctx);
     getVoteCount();
     getRank();
   };
 </script>
 
 <body>
-<div class="continer centerIt">
+<div class="continer ">
 
     <div>
       <label class="project-title">Crystal</label>
@@ -51,6 +53,10 @@
       </div>
     </div>
 
+    <div class="dashboard">
+        <canvas id="canvas"></canvas>
+    </div>
+
     <div class="buttons">
         <button title="ranking list button" class="btn" onclick=" window.open('https://www.momoshop.com.tw/edm/cmmedm.jsp?npn=1vEIDxHc0HHc&n=1&tag=[id]tag-Area_toplist', '_blank'); return false;">查看總排名</button>
     </div>
@@ -62,3 +68,4 @@
 <script type="text/javascript" src="getVote.js"></script>
 <script type="text/javascript" src="competitor.js"></script>
 <script type="text/javascript" src="getRank.js"></script>
+<script type="text/javascript" src="drawLineChart.js"></script>
