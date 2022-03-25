@@ -1,7 +1,8 @@
 function drawLineChart(ctx) {
+    var recentVote = 0;
     var label = [];
     var vote = [];
-    var increament = [0];
+    var increament = [];
 
     //var ctx = document.getElementById("canvas").getContext("2d");
 
@@ -78,6 +79,7 @@ function drawLineChart(ctx) {
     };
     
     async function getData(){
+        await getRencentVote();
         let url = 'https://script.google.com/macros/s/AKfycbzhL7nTeiI-H12Fgnb_MV6OMZPTR2s01F3D61Qw7Rv2qQGuVxT2/exec'
         await fetch(url)
             .then(res => res.json())
@@ -100,8 +102,7 @@ function drawLineChart(ctx) {
                     }
                     //label.push(data[index][2])
                     //vote.push(data[index][1])
-                }
-                
+                };                
             });
     };
 
@@ -110,7 +111,31 @@ function drawLineChart(ctx) {
         for(let i=1; i<vote.length; i++) {
             increament.push(vote[i]-vote[i-1]);
         }
+        increament.push(recentVote-vote[vote.length-1]);
     };
+
+    async function getRencentVote() {
+        let url = "https://event.momoshop.com.tw/CloudVote.PROMO";
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+    
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    
+    
+        let data = `{
+        "doAction": "voteCnt",
+        "no": "A_7",
+        "promoNo": "P020220318"
+        }`;
+        xhr.send(data);
+    
+        xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            var res = JSON.parse(xhr.responseText)
+            var countNum = (res.competitorStatus[0].TOTALSCORE);
+            recentVote = countNum;
+        }};
+    }
     
 }
 
