@@ -17,9 +17,17 @@ function getVoteCount(){
         if (xhr.readyState === 4) {
             var res = JSON.parse(xhr.responseText)
             var countNum = (res.competitorStatus[0].TOTALSCORE);
+            var s1Score = (res.competitorStatus[0].S1);
+            var s2Score = (res.competitorStatus[0].S2);
+            var s3Score = (res.competitorStatus[0].S3);
             console.log(countNum)
-            document.querySelector(".voteCount > .value").innerHTML=countNum+" 票"
+            console.log(s1Score)
+            document.querySelector(".voteCount > .value").innerHTML = countNum+" 票";
+            document.getElementsByClassName("S1")[0].innerHTML  = s1Score;
+            document.getElementsByClassName("S2")[0].innerHTML  = s2Score;
+            document.getElementsByClassName("S3")[0].innerHTML  = s3Score;
         }};
+
     var timeinterval = setInterval(function(){
         let url = "https://event.momoshop.com.tw/CloudVote.PROMO";
         let xhr = new XMLHttpRequest();

@@ -60,7 +60,8 @@ body {
   }
 
   .continer .counter .voteCount,
-  .continer .counter .ranking {
+  .continer .counter .ranking, 
+  .continer .counter .achievement {
     display: block;
   }
 
@@ -73,6 +74,19 @@ body {
     text-align: center;
     height: 80px;
     line-height: 80px;
+  }
+
+  .continer .counter .achievement p {
+    text-align: center;
+  }
+  
+  .continer .counter .achievement .congrats,
+  .continer .counter .achievement .S1,
+  .continer .counter .achievement .S2,
+  .continer .counter .achievement .S3 {
+    display: block;
+    font-size: 40pt;
+    text-align: center;
   }
 
   .continer .counter .days .value,
